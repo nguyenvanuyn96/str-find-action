@@ -23,4 +23,4 @@ outputs:
     description: "The list of string which have been found"
 runs:
   using: "docker"
-  image: "docker://nguyenvanuyn96/str-find-action@master"
+  image: "docker://nguyenvanuyn96/str-find-action:latest"
