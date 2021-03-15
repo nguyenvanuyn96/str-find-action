@@ -1,0 +1,23 @@
+name: "Find"
+description: "Find a string in your project files"
+author: "Uy Nguyen"
+inputs:
+  include:
+    description: "A regular expression of files to include in our find string action"
+    default: ".*" # Include everything by default
+    required: false
+  exclude:
+    description: "A regular expression of files to exclude in our find string action"
+    default: ".git" # Ignore the `.git` dirtectory by default
+    required: false
+  find:
+    description: "The string we want to find"
+    required: true
+outputs:
+  fileFoundCount:
+    description: "The number of files which have been found"
+  resultArray:
+    description: "The list of string which have been found"
+runs:
+  using: "docker"
+  image: "docker://nguyenvanuyn96/str-find-action@master"
