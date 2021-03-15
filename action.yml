@@ -1,7 +1,9 @@
 name: "Find Strings"
 description: "Find a string in your project files"
 author: "Uy Nguyen"
-icons: "search"
+branding:
+  icon: search
+  color: blue
 inputs:
   include:
     description: "A regular expression of files to include in our find string action"
