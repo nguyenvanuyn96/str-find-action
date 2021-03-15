@@ -35,7 +35,7 @@ func doesFileMatch(path string, include string, exclude string) bool {
 	return false
 }
 
-func findStringInFile(path string, find string) ([]string], error) {
+func findStringInFile(path string, find string) ([]string, error) {
 	read, readErr := ioutil.ReadFile(path)
 	check(readErr)
 
@@ -71,5 +71,5 @@ func main() {
 	}
 
 	fmt.Println(fmt.Sprintf(`::set-output name=fileFoundCount::%d`, fileFoundCount))
-	fmt.Println(fmt.Sprintf(`::set-output name=resultArray::%d`, resultArray))
+	fmt.Println(fmt.Sprintf(`::set-output name=resultArray::%v`, resultArray))
 }
