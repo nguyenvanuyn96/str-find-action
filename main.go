@@ -46,7 +46,7 @@ func findStringInFile(path string, find string) ([]string], error) {
 		return results, nil
 	}
 
-	return [], nil
+	return []string{}, nil
 }
 
 func main() {
@@ -64,7 +64,7 @@ func main() {
 		foundStrs, findStringErr := findStringInFile(path, find)
 		check(findStringErr)
 
-		if foundStrs.isNotEmpty {
+		if len(foundStrs) > 0 {
 			fileFoundCount++
 			resultArray = append(resultArray, foundStrs...)
 		}
