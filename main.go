@@ -69,7 +69,7 @@ func main() {
 			resultArray = append(resultArray, foundStrs...)
 		}
 	}
-
-	fmt.Println(fmt.Sprintf(`::set-output name=fileFoundCount::%d`, fileFoundCount))
-	fmt.Println(fmt.Sprintf(`::set-output name=resultArray::%v`, resultArray))
+1
+	fmt.Println(fmt.Sprintf('fileFoundCount=%d >> $GITHUB_OUTPUT', fileFoundCount))
+	fmt.Println(fmt.Sprintf('resultArray=%v >> $GITHUB_OUTPUT', resultArray))
 }
